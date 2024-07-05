@@ -182,6 +182,77 @@
             color: gray;
             padding: 12px 0;
         }
+
+        h1 {
+            text-align: center;
+            color: #967e7e;
+        }
+
+        .thirdSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 100vh;
+
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px 40px;
+            flex-direction: column;
+            display: flex;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #482f2f;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:active {
+            background-color: #0056b3;
+            transform: translateY(1px);
+        }
+
+        .github-link a {
+            text-decoration: none;
+            color: #e310a4;
+            font-size: 14px;
+            font-weight: bold;
+            /* border: 1px solid #007bff; */
+            /* padding: 5px 10px; */
+            /* border-radius: 4px; */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .github-link a:hover {
+            background-color: #2c8ef6;
+            color: #e50ca8;
+        }
     </style>
 </head>
 
@@ -230,7 +301,10 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Impedit sint iure, eius facere, laudantium laboriosam quaerat ipsa molestiae porro, tempora
                         itaque dolorem quisquam cum dolor in tenetur.
-                        Ducimus, voluptate totam!
+                        Ducimus, voluptate totam! <br><br>
+                        <div class="github-link">
+                            <a href="https://anshikadwivedi018.github.io/Project_CodeNest/" target="_blank">CodeNest</a>
+                        </div>
                     </div>
                 </div>
                 <div class="vertical">
@@ -242,7 +316,11 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Impedit sint iure, eius facere, laudantium laboriosam quaerat ipsa molestiae porro, tempora
                         itaque dolorem quisquam cum dolor in tenetur.
-                        Ducimus, voluptate totam!
+                        Ducimus, voluptate totam!<br><br>
+                        <div class="github-link">
+                            <a href="https://github.com/anshikadwivedi018/GoldPricePrediction/blob/main/Project1_Gold_Price_Prediction.ipynb"
+                                target="_blank">Gold Price Prediction</a>
+                        </div>
                     </div>
                 </div>
                 <div class="vertical">
@@ -269,6 +347,24 @@
                         Ducimus, voluptate totam!
                     </div>
                 </div>
+        </section>
+        <hr>
+        <section class="thirdSection">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <form id="contactForm" onsubmit="return validateForm()">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer>
@@ -328,14 +424,14 @@
 
         function sendEmail() {
             var userEmail = prompt("Please enter your email address:");
-            
+
             if (userEmail) {
                 var subject = "Subject of your email";
                 var emailBody = "Body of your email";
                 var mailtoLink = 'mailto:your-email@example.com' +
-                                 '?subject=' + encodeURIComponent(subject) +
-                                 '&body=' + encodeURIComponent(emailBody) +
-                                 '&cc=' + encodeURIComponent(userEmail);
+                    '?subject=' + encodeURIComponent(subject) +
+                    '&body=' + encodeURIComponent(emailBody) +
+                    '&cc=' + encodeURIComponent(userEmail);
 
                 window.location.href = mailtoLink;
             }
