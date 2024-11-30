@@ -281,6 +281,7 @@
                     <button class="btn" onclick="openLinkedIn()">LinkedIn</button>
                     <button class="btn" onclick="openGitHub()">GitHub</button>
                     <button class="btn" onclick="sendEmail()">Email</button>
+                    <button class="btn" onclick="downloadResume()">Resume</button>
                 </div>
             </div>
             <div class="rightSection">
@@ -416,7 +417,7 @@
         }
 
         function downloadResume() {
-            window.location.href = 'C:/Users/91831/OneDrive/Desktop/Documents/Desktop/resume_ad_final.pdf';
+            window.open("https://drive.google.com/file/d/11puWn0OHZ9Rezza-HYOG3tEhRlIZXKDS/view?usp=sharing","_blank");
         }
         document.getElementById('Email').onclick = function () {
             sendEmail();
